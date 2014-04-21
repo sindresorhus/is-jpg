@@ -1,6 +1,6 @@
 {
   "name": "is-jpg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Check if a Buffer/Uint8Array is a JPEG image",
   "license": "MIT",
   "repo": "sindresorhus/is-jpg",
