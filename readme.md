@@ -27,7 +27,7 @@ $ component install sindresorhus/is-jpg
 ```js
 var readChunk = require('read-chunk'); // npm install read-chunk
 var isJpg = require('is-jpg');
-var buffer = readChunk('unicorn.jpg', 0, 4);
+var buffer = readChunk('unicorn.jpg', 0, 3);
 
 isJpg(buffer);
 //=> true
@@ -55,7 +55,7 @@ xhr.send();
 
 Accepts a Buffer (Node.js) or Uint8Array.
 
-It only needs the first 4 bytes.
+It only needs the first 3 bytes.
 
 
 ## License

@@ -4,12 +4,13 @@ var readChunk = require('read-chunk');
 var isJpg = require('./index');
 
 function check(filename) {
-	return isJpg(readChunk.sync(filename, 0, 4));
+	return isJpg(readChunk.sync(filename, 0, 3));
 }
 
 it('should detect JPEG from Buffer', function () {
 	assert(check('fixture.jpg'));
 	assert(check('fixture-imageoptim.jpg'));
+	assert(check('fixture-issue1.jpg'));
 	assert(!check('fixture.png'));
 });
 
