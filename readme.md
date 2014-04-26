@@ -27,7 +27,7 @@ $ component install sindresorhus/is-jpg
 ```js
 var readChunk = require('read-chunk'); // npm install read-chunk
 var isJpg = require('is-jpg');
-var buffer = readChunk('unicorn.jpg', 0, 3);
+var buffer = readChunk.sync('unicorn.jpg', 0, 3);
 
 isJpg(buffer);
 //=> true
