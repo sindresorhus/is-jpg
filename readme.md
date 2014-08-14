@@ -11,14 +11,6 @@ Used by [image-type](https://github.com/sindresorhus/image-type).
 $ npm install --save is-jpg
 ```
 
-```sh
-$ bower install --save is-jpg
-```
-
-```sh
-$ component install sindresorhus/is-jpg
-```
-
 
 ## Usage
 
