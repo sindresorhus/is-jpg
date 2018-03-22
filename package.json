@@ -1,6 +1,6 @@
 {
   "name": "is-jpg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if a Buffer/Uint8Array is a JPEG image",
   "license": "MIT",
   "repository": "sindresorhus/is-jpg",
@@ -16,7 +16,8 @@
     "test": "mocha"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "license"
   ],
   "keywords": [
     "jpg",
