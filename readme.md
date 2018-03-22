@@ -1,14 +1,12 @@
 # is-jpg [![Build Status](https://travis-ci.org/sindresorhus/is-jpg.svg?branch=master)](https://travis-ci.org/sindresorhus/is-jpg)
 
-> Check if a Buffer/Uint8Array is a [JPEG](http://en.wikipedia.org/wiki/JPEG) image
-
-Used by [image-type](https://github.com/sindresorhus/image-type).
+> Check if a Buffer/Uint8Array is a [JPEG](https://en.wikipedia.org/wiki/JPEG) image
 
 
 ## Install
 
-```sh
-$ npm install --save is-jpg
+```
+$ npm install is-jpg
 ```
 
 
@@ -17,9 +15,9 @@ $ npm install --save is-jpg
 ##### Node.js
 
 ```js
-var readChunk = require('read-chunk'); // npm install read-chunk
-var isJpg = require('is-jpg');
-var buffer = readChunk.sync('unicorn.jpg', 0, 3);
+const readChunk = require('read-chunk');
+const isJpg = require('is-jpg');
+const buffer = readChunk.sync('unicorn.jpg', 0, 3);
 
 isJpg(buffer);
 //=> true
@@ -28,11 +26,11 @@ isJpg(buffer);
 ##### Browser
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'unicorn.jpg');
 xhr.responseType = 'arraybuffer';
 
-xhr.onload = function () {
+xhr.onload = () => {
 	isJpg(new Uint8Array(this.response));
 	//=> true
 };
@@ -50,6 +48,11 @@ Accepts a Buffer (Node.js) or Uint8Array.
 It only needs the first 3 bytes.
 
 
+## Related
+
+- [file-type](https://github.com/sindresorhus/file-type) - Detect the file type of a Buffer/Uint8Array
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

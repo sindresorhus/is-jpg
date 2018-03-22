@@ -1,22 +1,19 @@
-'use strict';
-var assert = require('assert');
-var readChunk = require('read-chunk');
-var isJpg = require('./');
+import test from 'ava';
+import readChunk from 'read-chunk';
+import m from '.';
 
-function check(filename) {
-	return isJpg(readChunk.sync(filename, 0, 3));
-}
+const check = filename => m(readChunk.sync(filename, 0, 3));
 
-it('should detect JPEG from Buffer', function () {
-	assert(check('fixture.jpg'));
-	assert(check('fixture-imageoptim.jpg'));
-	assert(check('fixture-issue1.jpg'));
-	assert(!check('fixture.png'));
+test('detects JPEG from Buffer', t => {
+	t.true(check('fixture.jpg'));
+	t.true(check('fixture-imageoptim.jpg'));
+	t.true(check('fixture-issue1.jpg'));
+	t.true(!check('fixture.png'));
 });
 
-it('should detect JPEG from Uint8Array', function () {
-	var buf = new Uint8Array([255, 216, 255, 225, 0]);
-	assert(isJpg(buf));
+test('detects JPEG from Uint8Array', t => {
+	const buf = new Uint8Array([255, 216, 255, 225, 0]);
+	t.true(m(buf));
 	buf[0] = 0;
-	assert(!isJpg(buf));
+	t.true(!m(buf));
 });
