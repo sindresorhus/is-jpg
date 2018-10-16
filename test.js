@@ -8,6 +8,7 @@ test('detects JPEG from Buffer', t => {
 	t.true(check('fixture.jpg'));
 	t.true(check('fixture-imageoptim.jpg'));
 	t.true(check('fixture-issue1.jpg'));
+	t.true(check('fixture-tiny.jpg'));
 	t.true(!check('fixture.png'));
 });
 
