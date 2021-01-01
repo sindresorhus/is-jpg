@@ -1,4 +1,4 @@
-# is-jpg [![Build Status](https://travis-ci.org/sindresorhus/is-jpg.svg?branch=master)](https://travis-ci.org/sindresorhus/is-jpg)
+# is-jpg
 
 > Check if a Buffer/Uint8Array is a [JPEG](https://en.wikipedia.org/wiki/JPEG) image
 
