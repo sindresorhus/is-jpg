@@ -2,22 +2,21 @@
 
 > Check if a Buffer/Uint8Array is a [JPEG](https://en.wikipedia.org/wiki/JPEG) image
 
-
 ## Install
 
+```sh
+npm install is-jpg
 ```
-$ npm install is-jpg
-```
-
 
 ## Usage
 
 ##### Node.js
 
 ```js
-const readChunk = require('read-chunk');
-const isJpg = require('is-jpg');
-const buffer = readChunk.sync('unicorn.jpg', 0, 3);
+import {readChunk} from 'read-chunk';
+import isJpg from 'is-jpg';
+
+const buffer = await readChunk('unicorn.jpg', {length: 3});
 
 isJpg(buffer);
 //=> true
@@ -38,21 +37,14 @@ xhr.onload = () => {
 xhr.send();
 ```
 
-
 ## API
 
 ### isJpg(buffer)
 
-Accepts a Buffer (Node.js) or Uint8Array.
+Accepts a `Buffer` (Node.js) or `Uint8Array`.
 
 It only needs the first 3 bytes.
-
 
 ## Related
 
 - [file-type](https://github.com/sindresorhus/file-type) - Detect the file type of a Buffer/Uint8Array
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

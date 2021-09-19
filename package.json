@@ -1,45 +1,44 @@
 {
-  "name": "is-jpg",
-  "version": "2.0.0",
-  "description": "Check if a Buffer/Uint8Array is a JPEG image",
-  "license": "MIT",
-  "repository": "sindresorhus/is-jpg",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "jpg",
-    "jpeg",
-    "image",
-    "img",
-    "pic",
-    "picture",
-    "photo",
-    "type",
-    "detect",
-    "check",
-    "is",
-    "exif",
-    "binary",
-    "buffer",
-    "uint8array",
-    "cli",
-    "bin"
-  ],
-  "devDependencies": {
-    "ava": "*",
-    "read-chunk": "^2.1.0",
-    "xo": "*"
-  }
+	"name": "is-jpg",
+	"version": "2.0.0",
+	"description": "Check if a Buffer/Uint8Array is a JPEG image",
+	"license": "MIT",
+	"repository": "sindresorhus/is-jpg",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"jpg",
+		"jpeg",
+		"image",
+		"picture",
+		"photo",
+		"type",
+		"detect",
+		"check",
+		"is",
+		"exif",
+		"binary",
+		"buffer",
+		"uint8array"
+	],
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"read-chunk": "^4.0.2",
+		"xo": "^0.44.0"
+	}
 }

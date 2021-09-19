@@ -1,8 +1,8 @@
 import test from 'ava';
-import readChunk from 'read-chunk';
-import m from '.';
+import {readChunkSync} from 'read-chunk';
+import isJpg from './index.js';
 
-const check = filename => m(readChunk.sync(filename, 0, 3));
+const check = filename => isJpg(readChunkSync(filename, {length: 3}));
 
 test('detects JPEG from Buffer', t => {
 	t.true(check('fixture.jpg'));
@@ -13,8 +13,8 @@ test('detects JPEG from Buffer', t => {
 });
 
 test('detects JPEG from Uint8Array', t => {
-	const buf = new Uint8Array([255, 216, 255, 225, 0]);
-	t.true(m(buf));
-	buf[0] = 0;
-	t.true(!m(buf));
+	const buffer = new Uint8Array([255, 216, 255, 225, 0]);
+	t.true(isJpg(buffer));
+	buffer[0] = 0;
+	t.true(!isJpg(buffer));
 });
